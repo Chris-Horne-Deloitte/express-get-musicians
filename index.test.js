@@ -17,10 +17,14 @@ describe('./musicians endpoint', () => {
         // const responseData = JSON.parse(response.text)
         expect(response.statusCode).toBe(200);
     })
+
+    it("testing the /musician/:id endpoint", async() => {
+        const response = await request(app).get("/musicians/:id");
+        expect(response.statusCode).toBe(200)
+    })
     
-
-
-
-
+    // it("testing the update method", async() => {
+        
+    // })
     
 })
